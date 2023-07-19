@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "718731555921",
+    "project_id": "armbot-apps",
+    "storage_bucket": "armbot-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718731555921:android:98803a0f95639f6854b470",
+        "android_client_info": {
+          "package_name": "com.example.arm_health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718731555921-57hcfff0bjpij55kpu3jjtrnk2omru5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCraM8lBvKCrTLSPuQwmB58NJdUOoJgK7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718731555921-57hcfff0bjpij55kpu3jjtrnk2omru5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
