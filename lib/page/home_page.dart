@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../config/asset.dart';
 import '../config/color.dart';
+import '../controller/newpatient_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,6 +14,27 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final PatientController patientController = Get.put(PatientController());
+  final PatientController patientController2 = Get.find();
+  final formkey = GlobalKey<FormState>();
+  // TextEditingController patientname = TextEditingController();
+  // TextEditingController age = TextEditingController();
+  // TextEditingController bloodpressure = TextEditingController();
+
+  // submitdata() {
+  //   String? patientname1 = patientname.text;
+  //   int? age1 = int.parse(age.text);
+  //   String? bloodpressure1 = bloodpressure.text;
+  //   Map<String, dynamic> data = {
+  //     "patient_name": patientname1,
+  //     "age": age1,
+  //     "blood_pressure": bloodpressure1,
+  //   };
+  //   patientController.submit(data);
+
+  //   patientname.clear();
+  //   age.clear();
+  //   bloodpressure.clear();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.only(
                           left: 20.0, right: 20.0, bottom: 20.0, top: 10),
                       child: TextFormField(
-                        controller: patientController.patient_name,
+                        controller: patientController.patientname,
                         validator: (value) =>
                             value == '' ? "Don't empty" : null,
                         decoration: InputDecoration(
@@ -144,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           height: 50,
                           child: TextFormField(
-                            controller: patientController.blood_pressure,
+                            controller: patientController.bloodpressure,
                             validator: (value) =>
                                 value == '' ? "Don't empty" : null,
                             decoration: InputDecoration(
@@ -283,7 +305,7 @@ class _HomePageState extends State<HomePage> {
                     fixedSize: const Size(200, 50),
                   ),
                   onPressed: () {
-                    patientController.savePatient();
+                    patientController.submitdata();
                   },
                   child: const Text('Finish'),
                 ),
